@@ -1,0 +1,246 @@
+    1  cd /rsgrps/bh_class
+    2  ls
+    3  mkdir pmoma
+    4  top
+    5  nano .bashrc
+    6  ls
+    7  pwd
+    8  git pull https://github.com/hurwitzlab/biosys-analytics/blob/master/assignments/01-unix/README.md
+    9  git -
+   10  git -h
+   11  hit --help
+   12  git --help
+   13  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   14  git init
+   15  ls
+   16  pwd
+   17  ls -a
+   18  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   19  ls -h
+   20  ls
+   21  ls -a
+   22  cd .git
+   23  ls
+   24  wc -man
+   25  wc --help
+   26  var --help
+   27  env
+   28  wc --help
+   29  man wc
+   30  curl --help
+   31  find --help
+   32  ps
+   33  htop
+   34  find --help
+   35  tree
+   36  $PWD
+   37  find --help
+   38  $USER
+   39  $LOGNAME
+   40  git status
+   41  cd ..
+   42  ls
+   43  pwd
+   44  ls -a
+   45  git clone https://github.com/pmoma/biosys-analytics.git
+   46  ls
+   47  cd biosys-analytics/
+   48  ls
+   49  cd assignments/
+   50  ls
+   51  cd 01-unix
+   52  ls
+   53  less README.md 
+   54  cd ../..
+   55  ls
+   56  cd lectures/
+   57  ls
+   58  ls 01-intro/
+   59  less 01-intro/01-intro.pdf 
+   60  nano 01-intro/01-intro.pdf 
+   61  01-intro/01-intro.pdf 
+   62  cd 01-intro/
+   63  ls
+   64  cat redirect foo
+   65  cat > foo
+   66  ls
+   67  cat foo
+   68  cd ~
+   69  ls
+   70  pwd
+   71  mkdir peter
+   72  ls
+   73  echo $PATH
+   74  clear
+   75  echo $PATH
+   76  less .bashrc
+Opened this second window to stop switching to nano every problem.
+   77  cd biosys-analytics/files/
+   78  grep -w 'scarlet' scarlet.txt 
+   79  grep -w 'scarlet' scarlet.txt | wc -w
+   80  grep --help
+   81  grep -w -i 'scarlet' scarlet.txt | wc -w
+   82  wc --help
+   83  find --help
+   84  man find
+   85  awk --help
+   86  wc --help
+   87  grep -w -i 'scarlet' scarlet.txt 
+   88  grep -w -i 'scarlet' scarlet.txt | wc -l
+   89  uniq --help
+   90  grep --help
+   91  grep -wio 'scarlet' scarlet.txt | wc -l
+   92  grep -wio 'scarlet' scarlet.txt 
+   93  grep -wio 'scarlet' scarlet.txt | wc -l
+   94  head --help
+   95  head -n 15 *.txt | touch foo
+   96  less foo
+   97  ls
+   98  less 50k
+   99* rm 5
+  100  head -n 15 *.txt->foo
+  101* less 
+  102  head -n 15 *.txt | paste foo
+  103  less foo
+  104  head -n 15 *.txt 
+  105  head -n 15 *.txt | mv foo
+  106  paste --help
+  107  head -n 15 *.txt >> foo
+  108  less foo
+  109  wc -l foo
+  110  less foo
+  111  rm foo
+  112  history >cmnds
+    1  cd /rsgrps/bh_class
+    2  ls
+    3  mkdir pmoma
+    4  top
+    5  nano .bashrc
+    6  ls
+    7  pwd
+    8  git pull https://github.com/hurwitzlab/biosys-analytics/blob/master/assignments/01-unix/README.md
+    9  git -
+   10  git -h
+   11  hit --help
+   12  git --help
+   13  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   14  git init
+   15  ls
+   16  pwd
+   17  ls -a
+   18  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   19  ls -h
+   20  ls
+   21  ls -a
+   22  cd .git
+   23  ls
+   24  wc -man
+   25  wc --help
+   26  var --help
+   27  env
+   28  wc --help
+   29  man wc
+   30  curl --help
+   31  find --help
+   32  ps
+   33  htop
+   34  find --help
+   35  tree
+   36  $PWD
+   37  find --help
+   38  $USER
+   39  $LOGNAME
+   40  git status
+   41  cd ..
+   42  ls
+   43  pwd
+   44  ls -a
+   45  git clone https://github.com/pmoma/biosys-analytics.git
+   46  ls
+   47  cd biosys-analytics/
+   48  ls
+   49  cd assignments/
+   50  ls
+   51  cd 01-unix
+   52  ls
+   53  less README.md 
+   54  cd ../..
+   55  ls
+   56  cd lectures/
+   57  ls
+   58  ls 01-intro/
+   59  less 01-intro/01-intro.pdf 
+   60  nano 01-intro/01-intro.pdf 
+   61  01-intro/01-intro.pdf 
+   62  cd 01-intro/
+   63  ls
+   64  cat redirect foo
+   65  cat > foo
+   66  ls
+   67  cat foo
+   68  cd ~
+   69  ls
+   70  pwd
+   71  mkdir peter
+   72  ls
+   73  echo $PATH
+   74  clear
+   75  echo $PATH
+   76  less .bashrc
+   77  ls
+   78  cd biosys-analytics/
+   79  l
+   80  ls
+   81  git pull upstream master
+   82  cd ..
+   83  ls
+   84  git init
+   85  cd /.ssh
+   86  cd ~/.ssh
+   87  ls
+   88  less id_dsa.pub 
+   89  nano id_dsa.pub 
+   90  less id_dsa.pub 
+   91  git --version
+   92  git --help
+   93  git help update
+   94  cd ~
+   95  ls
+   96  git clone git@github.com:pmoma/biosys-analytics.git
+   97  rm -r biosys-analytics/
+   98  git clone git@github.com:pmoma/biosys-analytics.git
+   99  ls
+  100  ls biosys-analytics/
+  101  git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+  102  git pull upstream master
+  103  cd peter/
+  104  ls
+  105  nano hw1
+  106  ls
+  107  fortune | cowsay
+  108  cowsay
+  109  nano hw1
+  110  cd ../b
+  111  cd ../bi
+  112  cd ../biosys-analytics/
+  113  ls
+Start of homewoek in first window
+  114  mkdir files
+  115  cd files/
+  116  ls
+  117  touch answers.txt
+  118  wget https://www.constitution.org/usdeclar.txt
+  119  ls
+  120  wget https://www.usconstitution.net/const.txt
+  121  ls
+  122  nano answers.txt 
+  123  wget --help
+  124  man wget
+  125  wget -O scarlet.txt  https://www.gutenberg.org/files/25344/25344-0.txt
+  126  ls
+  127  less scarlet.txt 
+  128  nano answers.txt 
+  129  cd biosys-analytics/files/answers.txt
+  130  cd biosys-analytics/files/
+  131  nano answers.txt
+  132  history >>cmnds

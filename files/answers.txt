@@ -1,0 +1,76 @@
+[pmoma@login3 biosys-analytics]$ mkdir files
+[pmoma@login3 biosys-analytics]$ cd files/
+[pmoma@login3 files]$ ls
+[pmoma@login3 files]$ touch answers.txt
+[pmoma@login3 files]$ wget https://www.constitution.org/usdeclar.txt
+--2019-01-20 10:32:17--  https://www.constitution.org/usdeclar.txt
+Resolving www.constitution.org... 52.52.2.146, 52.8.181.78, 54.153.63.33, ...
+Connecting to www.constitution.org|52.52.2.146|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “usdeclar.txt”
+
+    [ <=>                                                                                                                                                            ] 8,685       --.-K/s   in 0s      
+
+2019-01-20 10:32:17 (116 MB/s) - “usdeclar.txt” saved [8685]
+
+[pmoma@login3 files]$ ls
+answers.txt  usdeclar.txt
+[pmoma@login3 files]$ wget https://www.usconstitution.net/const.txt
+--2019-01-20 10:32:35--  https://www.usconstitution.net/const.txt
+Resolving www.usconstitution.net... 52.52.40.206
+Connecting to www.usconstitution.net|52.52.40.206|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [text/plain]
+Saving to: “const.txt”
+
+    [ <=>                                                                                                                                                            ] 45,119      --.-K/s   in 0.04s   
+
+2019-01-20 10:32:36 (1.10 MB/s) - “const.txt” saved [45119]
+
+[pmoma@login3 files]$ ls
+answers.txt  const.txt	usdeclar.txt
+[pmoma@login3 files]$ wget -O scarlet.txt  https://www.gutenberg.org/files/25344/25344-0.txt
+--2019-01-20 10:39:17--  https://www.gutenberg.org/files/25344/25344-0.txt
+Resolving www.gutenberg.org... 152.19.134.47, 2610:28:3090:3000:0:bad:cafe:47
+Connecting to www.gutenberg.org|152.19.134.47|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 525464 (513K) [text/plain]
+Saving to: “scarlet.txt”
+
+100%[===============================================================================================================================================================>] 525,464      788K/s   in 0.7s    
+
+2019-01-20 10:39:18 (788 KB/s) - “scarlet.txt” saved [525464/525464]
+
+[pmoma@login3 files]$ ls
+answers.txt  const.txt	scarlet.txt  usdeclar.txt
+[pmoma@login3 files]$ less scarlet.txt 
+[pmoma@login3 files]$ ls -l
+total 584
+-rw-r--r-- 1 pmoma student   1554 Jan 20 10:33 answers.txt
+-rw-r--r-- 1 pmoma student  45119 Jan 18 11:58 const.txt
+-rw-r--r-- 1 pmoma student 525464 Jan 23  2015 scarlet.txt
+-rw-r--r-- 1 pmoma student   8685 Jan 18 11:58 usdeclar.txt
+[pmoma@login3 files]$ wc -l *.txt
+    35 answers.txt
+   872 const.txt
+  9120 scarlet.txt
+   176 usdeclar.txt
+ 10203 total
+[pmoma@login3 files]$ find -size +50k 
+./scarlet.txt
+[pmoma@login3 files]$ file const.txt 
+const.txt: ASCII English text
+[pmoma@login3 files]$ grep -wio 'scarlet' scarlet.txt | wc -l
+125
+[pmoma@login3 files]$ head -n 15 *.txt >> foo
+[pmoma@login3 files]$ less foo
+[pmoma@login3 files]$ wc -l foo
+67 foo
+It also includes header information that can be turned off using the -q flag as well as header and footer spacing lines which make it longer.
+[pmoma@login3 files]$ less foo
+[pmoma@login3 files]$ rm foo
+[pmoma@login3 files]$ history >cmnds
+End homework log. started by switching between storing outputs in nano and solving problems but then halfway through opened a second tab and left nano open in this one so my history might look a bit odd.
+
+
