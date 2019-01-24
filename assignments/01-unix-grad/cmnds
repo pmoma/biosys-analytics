@@ -1,0 +1,435 @@
+    1  cd /rsgrps/bh_class
+    2  ls
+    3  mkdir pmoma
+    4  top
+    5  nano .bashrc
+    6  ls
+    7  pwd
+    8  git pull https://github.com/hurwitzlab/biosys-analytics/blob/master/assignments/01-unix/README.md
+    9  git -
+   10  git -h
+   11  hit --help
+   12  git --help
+   13  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   14  git init
+   15  ls
+   16  pwd
+   17  ls -a
+   18  git clone https://github.com/hurwitzlab/biosys-analytics/tree/master/assignments/01-unix
+   19  ls -h
+   20  ls
+   21  ls -a
+   22  cd .git
+   23  ls
+   24  wc -man
+   25  wc --help
+   26  var --help
+   27  env
+   28  wc --help
+   29  man wc
+   30  curl --help
+   31  find --help
+   32  ps
+   33  htop
+   34  find --help
+   35  tree
+   36  $PWD
+   37  find --help
+   38  $USER
+   39  $LOGNAME
+   40  git status
+   41  cd ..
+   42  ls
+   43  pwd
+   44  ls -a
+   45  git clone https://github.com/pmoma/biosys-analytics.git
+   46  ls
+   47  cd biosys-analytics/
+   48  ls
+   49  cd assignments/
+   50  ls
+   51  cd 01-unix
+   52  ls
+   53  less README.md 
+   54  cd ../..
+   55  ls
+   56  cd lectures/
+   57  ls
+   58  ls 01-intro/
+   59  less 01-intro/01-intro.pdf 
+   60  nano 01-intro/01-intro.pdf 
+   61  01-intro/01-intro.pdf 
+   62  cd 01-intro/
+   63  ls
+   64  cat redirect foo
+   65  cat > foo
+   66  ls
+   67  cat foo
+   68  cd ~
+   69  ls
+   70  pwd
+   71  mkdir peter
+   72  ls
+   73  echo $PATH
+   74  clear
+   75  echo $PATH
+   76  less .bashrc
+   77  ls
+   78  cd biosys-analytics/
+   79  l
+   80  ls
+   81  git pull upstream master
+   82  cd ..
+   83  ls
+   84  git init
+   85  cd /.ssh
+   86  cd ~/.ssh
+   87  ls
+   88  less id_dsa.pub 
+   89  nano id_dsa.pub 
+   90  less id_dsa.pub 
+   91  git --version
+   92  git --help
+   93  git help update
+   94  cd ~
+   95  ls
+   96  git clone git@github.com:pmoma/biosys-analytics.git
+   97  rm -r biosys-analytics/
+   98  git clone git@github.com:pmoma/biosys-analytics.git
+   99  ls
+  100  ls biosys-analytics/
+  101  git remote add upstream https://github.com/hurwitzlab/biosys-analytics.git
+  102  git pull upstream master
+  103  cd peter/
+  104  ls
+  105  nano hw1
+  106  ls
+  107  fortune | cowsay
+  108  cowsay
+  109  nano hw1
+  110  cd ../b
+  111  cd ../bi
+  112  cd ../biosys-analytics/
+  113  ls
+  114  mkdir files
+  115  cd files/
+  116  ls
+  117  touch answers.txt
+  118  wget https://www.constitution.org/usdeclar.txt
+  119  ls
+  120  wget https://www.usconstitution.net/const.txt
+  121  ls
+  122  nano answers.txt 
+  123  wget --help
+  124  man wget
+  125  wget -O scarlet.txt  https://www.gutenberg.org/files/25344/25344-0.txt
+  126  ls
+  127  less scarlet.txt 
+  128  nano answers.txt 
+  129  cd biosys-analytics/
+  130  ls ..
+  131  cd files/
+  132  ls
+  133  ls -l
+  134  wc -h
+  135  wc --help
+  136  wc -l
+  137  ls
+  138  wc -l *.txt
+  139  find --help
+  140  find -size -gt 50000
+  141  help find size
+  142  find help size
+  143  man find
+  144  find -size 50k 
+  145  find -size >50k 
+  146  find -size 50 k 
+  147  man find
+  148  find -size +50k 
+  149  type const.txt 
+  150  ls
+  151  file const.txt 
+  152  md5sum --help
+  153  md5sum *.txt
+  154  md5sum 
+  155  man md5sum
+  156  md5sum --quiet *.txt
+  157  md5sum -t *.txt
+  158  md5sum -b *.txt
+  159  md5sum -c *.txt
+  160  cd ..
+  161  md5sum files/
+  162  md5sum files/ -r
+  163  top
+  164  df
+  165  du
+  166  df --help
+  167  df -B 1028
+  168  du -B 1028
+  169  du -h
+  170  grep --help
+  171  grep -i judge *.txt
+  172  ls
+  173  cd files/
+  174  grep -i judge *.txt
+  175  grep -i judge *.txt | count
+  176  grep -i judge *.txt | bc
+  177  grep -i judge *.txt | wc -l
+  178  grep -i human *.txt
+  179  grep -i human *.txt | cut 1
+  180  cut --help
+  181  grep -i human *.txt | cut -d=:
+  182  grep -i human *.txt | cut -d :
+  183  grep -i human *.txt | cut -d:
+  184  grep -i human *.txt | cut -d: -f1
+  185  grep -i human *.txt | cut -d: -f1 | uniq
+  186  grep --help
+  187  cd biosys-analytics/files/
+  188  grep -w 'scarlet' scarlet.txt 
+  189  grep -w 'scarlet' scarlet.txt | wc -w
+  190  grep --help
+  191  grep -w -i 'scarlet' scarlet.txt | wc -w
+  192  wc --help
+  193  find --help
+  194  man find
+  195  awk --help
+  196  wc --help
+  197  grep -w -i 'scarlet' scarlet.txt 
+  198  grep -w -i 'scarlet' scarlet.txt | wc -l
+  199  uniq --help
+  200  grep --help
+  201  grep -wio 'scarlet' scarlet.txt | wc -l
+  202  grep -wio 'scarlet' scarlet.txt 
+  203  grep -wio 'scarlet' scarlet.txt | wc -l
+  204  head --help
+  205  head -n 15 *.txt | touch foo
+  206  less foo
+  207  ls
+  208  less 50k
+  209  rm 5
+  210  head -n 15 *.txt->foo
+  211  less 
+  212  head -n 15 *.txt | paste foo
+  213  less foo
+  214  head -n 15 *.txt 
+  215  head -n 15 *.txt | mv foo
+  216  paste --help
+  217  head -n 15 *.txt >> foo
+  218  less foo
+  219  wc -l foo
+  220  less foo
+  221  rm foo
+  222  history >cmnds
+  223  less cmnds 
+  224  cd biosys-analytics/files/answers.txt
+  225  cd biosys-analytics/files/
+  226  nano answers.txt
+  227  history >>cmnds
+  228  less cmnds
+  229  nano cmnds
+  230  less
+  231  ls
+  232  less answers.txt.save 
+  233  rm answers.txt.save 
+  234  ls
+  235  git add -A files
+  236  cd ..
+  237  git add -A files
+  238  git commit -m 'All done' files
+  239  git push
+  240  cd biosys-analytics/
+  241  fd files/
+  242  cd files/
+  243  ls
+  244  nano answers.txt 
+  245  cd ..
+  246  ls
+  247  cd ..
+  248  ls
+  249  cd peter/
+  250  ls
+  251  cd ..
+  252  cd bi
+  253  cd biosys-analytics/
+  254  git pull upstream master
+  255  ls
+  256  cd biosys-analytics/
+  257  ls
+  258  ls -lrt
+  259  cd ..
+  260  ls -lrt
+  261  ls
+  262  rm assignments/
+  263  rm bin
+  264  rm -r data
+  265  rm -r bin
+  266  rm -r assignments/
+  267  rm -r examples/
+  268  rm -r lectures/
+  269  rm -r LICENSE 
+  270  rm -r README.md 
+  271  ls
+  272  cd biosys-analytics/
+  273  git pull upstream master
+  274  cd files/
+  275  ls
+  276  nano answers.txt 
+  277  git clone git@github.com:pmoma/biosys-analytics.git
+  278  ls
+  279  cd biosys-analytics/
+  280  ls
+  281  cd ..
+  282  ls biosys-analytics/files/
+  283  pwd
+  284  ls
+  285  ls -lrt
+  286  rm -r biosys-analytics/
+  287  start of homework
+  288  cd biosys-analytics/files/
+  289  ls
+  290  ls ..
+  291  ls biosys-analytics/
+  292  ls
+  293  cd biosys-analytics/
+  294  ls
+  295  cd ..
+  296  rm biosys-analytics/
+  297  rm -r biosys-analytics/
+  298  ls
+  299  cd ..
+  300  ls
+  301  cd assignments/
+  302  ls
+  303  cd 01-unix
+  304  ls
+  305  cd files/
+  306  cd ..
+  307  nano README.md 
+  308  cd files/
+  309  ls
+  310  touch grad_answers.txt
+  311  mv cmnds ..
+  312  mv answers.txt ..
+  313  mv grad_answers.txt ..
+  314  ls
+  315  awk --help
+  316  grep --help
+  317  grep -wic c*|s* *.txt
+  318  grep -wice c*|s* *.txt
+  319  grep -wice c* *.txt
+  320  grep -wic c* *.txt
+  321  grep -wicE c* *.txt
+  322  grep -wicE 'c* ' *.txt
+  323  grep -wic 'c* ' *.txt
+  324  grep -wi 'c* ' *.txt
+  325  grep -wi ' c* ' *.txt
+  326  grep --help
+  327  grep -i ' c* ' *.txt
+  328  grep -ic ' c* ' *.txt
+  329  grep -wic ' c* ' *.txt
+  330  grep -wic '\sc* ' *.txt
+  331  grep -wic 'c* ' *.txt
+  332  grep -wic 'c*' *.txt
+  333  grep -wic ' c*' *.txt
+  334  grep -wic ' c+' *.txt
+  335  grep -wic ' c+ ' *.txt
+  336  grep -wic ' ^c ' *.txt
+  337  grep -wic '^c' *.txt
+  338  grep -wic "^c" *.txt
+  339  grep -wic "c*" *.txt
+  340  grep -ic "c*" *.txt
+  341  grep -ic " c* " *.txt
+  342  grep -i " c* " *.txt
+  343  grep -i "c* " *.txt
+  344  grep -ic " c* | *s " *.txt
+  345  grep -ic " c* "|" *s " *.txt
+  346  grep -ic " c* "|" s* " *.txt
+  347  grep -ic "\sc*\s"|"\ss*\s" *.txt
+  348  grep -i " s* " *.txt
+  349  grep -ic " s* " *.txt
+  350  grep -ic " [c,s]* " *.txt
+  351  grep -ic " * " *.txt
+  352  grep -ic "*" *.txt
+  353  grep -i "*" *.txt
+  354  man grep
+  355  grep -i --color " [c,s]* " *.txt
+  356  grep -i --color " c* " *.txt
+  357  grep -i --color "c* " *.txt
+  358  grep -i --color " c*" *.txt
+  359  man grep
+  360  grep -in --color " c*" *.txt
+  361  grep -in --color "  c*" *.txt
+  362  grep -in --color "  c*{1-15}" *.txt
+  363  grep -in --color "  c*| s*" *.txt
+  364  grep -in --color "  [c,s]*" *.txt
+  365  grep -in --color "  [c,s]" *.txt
+  366  grep -in --color " [c,s]" *.txt
+  367  grep -ic " [c,s]" *.txt
+  368  grep -i " [c,s]" *.txt
+  369  grep -ic " [c,s]" *.txt
+  370  nano ../grad_answers.txt 
+  371  grep --help
+  372  grep -x "Article [1-9]" *.txt
+  373  grep "Article [1-9]" *.txt
+  374  grep "Article " *.txt
+  375  grep "Article" *.txt
+  376  grep "Article [1-9]" *.txt
+  377  nano ../grad_answers.txt 
+  378  grep --help
+  379  grep -x  * const.txt 
+  380  man grep
+  381  grep -x \S const.txt 
+  382  man grep
+  383  grep -x \W const.txt 
+  384  grep -x \w const.txt 
+  385  grep \w const.txt 
+  386  grep \W const.txt 
+  387  grep \W* const.txt 
+  388  grep -x \W const.txt 
+  389  grep \n const.txt 
+  390  grep --color \n const.txt 
+  391  grep --color \W const.txt 
+  392  grep --color ^\W const.txt 
+  393  grep --color ^/W const.txt 
+  394  grep --color /W const.txt 
+  395  man grep
+  396  grep --color ^[[:alnum:]] const.txt 
+  397  man grep
+  398  grep -v --color [[:alnum:]] const.txt 
+  399  grep -vc [[:alnum:]] const.txt 
+  400  man grep
+  401  grep -vc \w const.txt 
+  402  nano ../grad_answers.txt 
+  403  grep --help
+  404  grep -ic " [c,s]" *.txt
+  405  awk --help
+  406  find --help
+  407  grep --help
+  408  wc --help
+  409  man grep 
+  410  grep ^[aeiou] *.txt
+  411  grep --color ^[aeiou] *.txt
+  412  grep --color ^[AEIOUaeiou] *.txt
+  413  grep ^[AEIOUaeiou] *.txt|wc -c
+  414  wc --help
+  415  grep ^[AEIOUaeiou] *.txt|wc -m
+  416  man grep 
+  417  grep -o ^[AEIOUaeiou] *.txt
+  418  grep -o ^[AEIOUaeiou] *.txt|comm
+  419  comm --help
+  420  uniq --help
+  421  grep -o ^[AEIOUaeiou] *.txt|uniq -c
+  422  uniq --help
+  423  grep -o ^[AEIOUaeiou] *.txt|uniq -u
+  424  sort --help
+  425  grep - ^[AEIOUaeiou] *.txt
+  426  grep ^[AEIOUaeiou] *.txt
+  427  grep -o ^[AEIOUaeiou] *.txt|sort
+  428  grep --help
+  429  grep -oh ^[AEIOUaeiou] *.txt|sort
+  430  grep -oh ^[AEIOUaeiou] *.txt|sort|uniq
+  431  uniq --help
+  432  grep -oh ^[AEIOUaeiou] *.txt|sort|uniq -c
+  433  grep -oh ^[AEIOUaeiou] scarlet.txt|sort|uniq -c
+  434  nano ../grad_answers.txt 
+  435  history > cmnds

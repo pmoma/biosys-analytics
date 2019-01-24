@@ -1,0 +1,27 @@
+[pmoma@login2 files]$ grep -ic " [c,s]" *.txt
+const.txt:513
+scarlet.txt:5339
+usdeclar.txt:83
+[pmoma@login2 files]$ grep "Article [1-9]" *.txt
+const.txt:Article 1.
+const.txt:Article 2.
+const.txt:Article 3.
+const.txt:Article 4.
+const.txt:Article 5.
+const.txt:Article 6.
+const.txt:Article 7.
+[pmoma@login2 files]$ grep -vc [[:alnum:]] const.txt 
+170
+[pmoma@login2 files]$ grep -oh ^[AEIOUaeiou] scarlet.txt|sort|uniq -c
+    633 a
+     59 A
+    199 e
+     10 E
+    348 i
+     88 I
+    358 o
+     20 O
+     80 u
+      6 U
+
+cmnds starts at line 287-start of homework
