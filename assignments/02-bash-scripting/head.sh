@@ -17,7 +17,7 @@ fi
 
 while read -r LINE; do
 i=$((i+1))
-echo "$i $LINE"
+echo "$LINE"
 
 if [[ $# -gt 1 ]] && [[ $i -eq OPTIONAL_ARG ]]; then
 break
