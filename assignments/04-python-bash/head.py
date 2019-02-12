@@ -34,12 +34,13 @@ def main():
         print('lines ({}) must be a positive number'.format(num))
         sys.exit(1)        
     
-    i = 0        
-    while i > num:
-        with open(file) as i:
-            for line in i:
-                print('{}'.format(line), end='')
-                i += 1
+    with open(file) as i:
+        for count, line in enumerate(i, start=1):
+            if count==num:
+                print('{}'.format(line[:-1]))
+                break
+            else:
+                print('{}'.format(line[:-1]))
     
 # --------------------------------------------------
 main()
