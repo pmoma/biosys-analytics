@@ -31,7 +31,8 @@ def main():
         num = 3
     	
     if num < 1:
-        print('lines {} must be a positive number'.format(num))        
+        print('lines ({}) must be a positive number'.format(num))
+        sys.exit(1)        
     
     i = 0        
     while i > num:
