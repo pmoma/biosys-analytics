@@ -30,11 +30,11 @@ def get_args():
         help='Output filename ',
         metavar='str',
         type=str,
-        default='out.txt',
-        required=True)
+        default='out.txt')
 
     parser.add_argument(
         'positional', metavar='str', help='DNA/RNA sequence')
+#, required=True)
 
     return parser.parse_args()
 
