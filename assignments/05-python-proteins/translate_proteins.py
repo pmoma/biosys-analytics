@@ -34,7 +34,6 @@ def get_args():
 
     parser.add_argument(
         'positional', metavar='str', help='DNA/RNA sequence')
-#, required=True)
 
     return parser.parse_args()
 
