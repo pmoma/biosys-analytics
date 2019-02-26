@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Author : pmoma
-Date   : 2019-02-22
+Date   : 2019-02-26
 Purpose: Make a poetry anthology
 """
 
@@ -49,26 +49,37 @@ def main():
     lwidth = args.width
 
 #    print('line width = "{}"'.format(lwidth))
-#    print('poetry directory = "{}"'.format(dir))
-#    print('{}'.format(dir))
+#    print('poetry directory = "{}"'.format(dirs))
+  
     
     for d in dirs:
         if not os.path.isdir(d):
             warn('"{}" is not a directory'.format(d))
             continue
-        for filename in os.listdir(d):
-            print(filename)
-            with open(filename) as fh:
-                for line in f:
-                    print(line)
-                    break       
-            
-            
-    
-    
-    
+        print('{}'.format(''.join(d)))
+        
+        filelist=os.listdir(d)
+        fline=[]
+        for filename in filelist:
+#            print(filename)
+            abpath=os.path.join(d,filename)
+            with open(abpath) as fh:
+                for line in fh:
+#                    print(line)
+                    fline.append((line.rstrip(), os.path.basename(abpath)))
+                    break    
+#        print(fline)               
+        sline=sorted(fline)
+#        print(sline)   
+        for i in sline:
+                elip=lwidth-len(str(i[0]))-len(str(i[1]))
+                elip_str='.'
+                elip_str=elip*elip_str
+                print('{} {} {}'.format(i[0], elip_str, i[1]).strip())
+
 
 
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
+
