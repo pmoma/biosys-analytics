@@ -5,15 +5,9 @@ Date   : 2019-02-22
 Purpose: Make a poetry anthology
 """
 
-from __future__ import print_function
 import argparse
 import sys
 import os
-
-# --------------------------------------------------
-def eprint(*args, **kwargs):
-    print(*args, file=sys.stderr, **kwargs)
-
 
 # --------------------------------------------------
 def get_args():
@@ -51,35 +45,25 @@ def die(msg='Something bad happened'):
 def main():
     """Make a jazz noise here"""
     args = get_args()
-    dir = args.positional
+    dirs = args.positional
     lwidth = args.width
 
 #    print('line width = "{}"'.format(lwidth))
 #    print('poetry directory = "{}"'.format(dir))
-    
-    for i in dir:
-        if os.path.isdir(i) == False:
-            eprint('"{}" is not a directory'.format(i))
-            dir.remove(i)
-            continue
-    
 #    print('{}'.format(dir))
     
-    for i in dir:
-        for filename in os.listdir(i):
+    for d in dirs:
+        if not os.path.isdir(d):
+            warn('"{}" is not a directory'.format(d))
+            continue
+        for filename in os.listdir(d):
             print(filename)
-            with open(filename) as f:
+            with open(filename) as fh:
                 for line in f:
                     print(line)
                     break       
             
             
-            
-
-    
-    
-    
-    
     
     
     
