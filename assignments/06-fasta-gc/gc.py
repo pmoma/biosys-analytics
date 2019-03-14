@@ -73,7 +73,7 @@ def main():
             continue
         bn=os.path.basename(file)
         fh=os.path.splitext(bn)
-#        print(fh[0])
+        print(fh[0])
         print('{}: {}'.format(num,bn))
         
         highp=open(os.path.join(odir,(fh[0]+'_high'+fh[1])), 'wt')
