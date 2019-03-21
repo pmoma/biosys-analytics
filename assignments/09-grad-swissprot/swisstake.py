@@ -85,30 +85,22 @@ def main():
     
     numg=0
     numb=0
-    out=open(outf,'wt')
-    with open(file) as fil:
-        for record in SeqIO.parse(fil, 'swiss'):
-#            print(record.annotations)
-#            pp.pprint(record.annotations)
-            words=record.annotations.get('keywords', None)
-            taxa=record.annotations.get('taxonomy', None)
-            if words:
-#                print(words)
-                for j, k in itertools.product(skip, taxa):
-                    print(k.casefold(), j.casefold())
-                    if k.casefold() == j.casefold():
-                        numb+=1
-                        break
-                for i in words:
-#                    print(i)
-                    if i.casefold() == kword.casefold():
-#                        print('match', i, kword)
-                         SeqIO.write(record, out, 'fasta')
-                         numg+=1
-            else:
-                die('Bad file, no keyword term.')
-    out.close()
-    
+    with open(outf, 'w') as outfh:
+        for record in SeqIO.parse(file, 'swiss'):
+            annt=record.annotations
+            if skip and 'taxonomy' in annt:
+                taxa=set(map(str.lower,annt['taxonomy']))
+                skipp=set(map(str.lower,skip))
+                if skipp.intersection(taxa):
+                    numb+=1
+                    continue
+            if 'keywords' in annt:
+                kw=set(map(str.lower,annt['keywords']))
+                if kword in kw:
+                    numg+=1
+                    SeqIO.write(record,outfh,'fasta')
+                else:
+                    numb+=1
     print('Done, skipped {} and took {}. See output in "{}".'.format(numb,numg,outf))
 
 # --------------------------------------------------
