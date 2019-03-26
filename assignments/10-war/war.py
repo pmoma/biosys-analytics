@@ -50,11 +50,13 @@ def main():
         random.seed(seed)
         
     a = list('♥♠♣♦')
-    b = range(2,15)
-    deck=(sorted(product(a, b)))
+    b = list(map(str, range(2,11)))+list('JQKA')
+    tdeck=(list(product(a, b)))
+    deck=sorted(tdeck)
 #    print(deck)
+#    print(tdeck)  
     random.shuffle(deck)
-#    print(deck)    
+  
     p1w=0
     p2w=0
     while len(deck)>0:
@@ -63,44 +65,49 @@ def main():
 #        print(card1,card2)
 #        print('test')
 
-        if card1[1] == 11:
-            pcard1=('J')
-        elif card1[1] == 12:
-            pcard1=('Q')
-        elif card1[1] == 13:
-            pcard1=('K')
-        elif card1[1] == 14:
-            pcard1=('A')
+        if card1[1] == 'J':
+            pcard1=('11')
+        elif card1[1] == 'Q':
+            pcard1=('12')
+        elif card1[1] == 'K':
+            pcard1=('13')
+        elif card1[1] == 'A':
+            pcard1=('14')
         else:
             pcard1=card1[1]
         
-        if card2[1] == 11:
-            pcard2=('J')
-        elif card2[1] == 12:
-            pcard2=('Q')
-        elif card2[1] == 13:
-            pcard2=('K')
-        elif card2[1] == 14:
-            pcard2=('A')
+        if card2[1] == 'J':
+            pcard2=('11')
+        elif card2[1] == 'Q':
+            pcard2=('12')
+        elif card2[1] == 'K':
+            pcard2=('13')
+        elif card2[1] == 'A':
+            pcard2=('14')
         else:
             pcard2=card2[1]
-        cstr=(' {}{}  {}{}'.format(card1[0], pcard1, card2[0], pcard2))
-        if card1[1]>card2[1]:
-            print(cstr,' P1')
+            
+        cstr=('{:>3} {:>3}'.format(''.join(card1), ''.join(card2)))
+
+        if int(pcard1)>int(pcard2):
+            print(cstr,'P1')
             p1w+=1
-        elif card1[1]<card2[1]:
-            print(cstr,' P2')
+        elif int(pcard1)<int(pcard2):
+            print(cstr,'P2')
             p2w+=1
         else:
-            print(cstr,' War!')
+            print(cstr,'WAR!')
     if p1w>p2w:
         winner='Player 1'
     elif p1w<p2w:
         winner='Player 2'
     else:
         winner='DRAW'
-    print('P1 {} P2 {}: {} wins'.format(p1w,p2w,winner))
     
+    if winner != 'DRAW':
+        print('P1 {} P2 {}: {} wins'.format(p1w,p2w,winner))
+    else:
+        print('P1 {} P2 {}: {}'.format(p1w,p2w,winner))    
         
         
 
