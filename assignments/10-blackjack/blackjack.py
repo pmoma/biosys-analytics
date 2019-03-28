@@ -83,7 +83,7 @@ def main():
     if dealer_hits:
         dcards.append(deck.pop())
 #    print(pcards)
-#    print(dcards)
+ #   print(dcards)
     
     ptot=0    
     dtot=0
@@ -101,15 +101,15 @@ def main():
 #    print(dcardp) 
     
     
-    if player_hits:
+    if player_hits and dealer_hits:
+        print('''D [{:>2}]: {} {} {}
+P [{:>2}]: {} {} {}'''.format(dtot,dcardp[0],dcardp[1], dcardp[2],ptot,pcardp[0],pcardp[1], pcardp[2]))
+    elif player_hits:
         print('''D [{:>2}]: {} {}
 P [{:>2}]: {} {} {}'''.format(dtot,dcardp[0],dcardp[1],ptot,pcardp[0],pcardp[1], pcardp[2]))        
     elif dealer_hits:
         print('''D [{:>2}]: {} {} {}
 P [{:>2}]: {} {}'''.format(dtot,dcardp[0],dcardp[1], dcardp[2],ptot,pcardp[0],pcardp[1]))
-    elif player_hits and dealer_hits:
-        print('''D [{:>2}]: {} {} {}
-P [{:>2}]: {} {} {}'''.format(dtot,dcardp[0],dcardp[1], dcardp[2],ptot,pcardp[0],pcardp[1], pcardp[2]))
     else:
         print('''D [{:>2}]: {} {}
 P [{:>2}]: {} {}'''.format(dtot,dcardp[0],dcardp[1],ptot,pcardp[0],pcardp[1]))
