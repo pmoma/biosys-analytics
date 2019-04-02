@@ -40,8 +40,8 @@ def main():
     hit=re.match('(?P<day>\d{1,2})', '01')
 #    print(hit.group('day'))
     form1=re.compile('(?P<year>\d{4})-*(?P<month>\d{1,2})-*(?P<day>\d{1,2})?')
-    form2=re.compile('(?P<month>\w{3,9})(-|(, ))(?P<year>\d{4})')
-    form3=re.compile('(?P<month>\d{1,2})[/](?P<year>\d{2})')
+    form2=re.compile('(?P<month>\w{3,9})(-|(, ))(?P<year>\d{4})(?P<day>\d{,2})')
+    form3=re.compile('(?P<month>\d{1,2})[/](?P<year>\d{2})(?P<day>\d{,2})')
 
     # form1=re.compile('(?P<year>\d{4})-*(?P<month>\d{1,2})-*(?P<day>\d{1,2})?')
     # form2=re.compile('(?P<month>\w{3,9})(-|(, ))(?P<year>\d{4})(-|(, ))(?P<day>\d{1,2})?')
@@ -67,21 +67,28 @@ def main():
     if len(hit.group('month')) == 1:
         month='0'+hit.group('month')
 
-    print(hit.groups())
+    #print(hit.groupdict())
+    # if hit.groupdict('day'):
+    #     print(hit.groupdict.('day'))
     c=0
     # for i in hit.groups():
     #     m=re.match('[- ]',i)
     #     c+=1
     # print(c)
 #    count the number of groups and remove the [-, None] so that there are three or two options
-    # if hit.group('day'):
-    #     print('yup')
-    # else:
-    #     day = '01'
+    if hit.group('day') == '':
+        #print('yup')
+        day='01'
+    elif hit.group('day') == None:
+        day='01'
+    else:
+        day=hit.group('day')
 
+    if int(day) <10:
+        print('{}-{}-0{}'.format(year,month,day))
+    else:
+        print('{}-{}-{}'.format(year,month,day))
 
-
-    print('{}-{}-{}'.format(year,month,'01'))
 
 
 # --------------------------------------------------
