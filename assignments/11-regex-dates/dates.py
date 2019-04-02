@@ -84,7 +84,7 @@ def main():
     else:
         day=hit.group('day')
 
-    if int(day) <10:
+    if int(day)<10 and len(day)<2:
         print('{}-{}-0{}'.format(year,month,day))
     else:
         print('{}-{}-{}'.format(year,month,day))
