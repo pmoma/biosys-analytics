@@ -23,8 +23,8 @@ def get_args():
         '-d',
 	'--debug',
         help='Debug',
-        type=bool,
-        default=False)
+        default=False,
+        action='store_true')
 
     return parser.parse_args()
 # --------------------------------------------------
