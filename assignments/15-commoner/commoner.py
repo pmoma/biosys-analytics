@@ -148,7 +148,7 @@ def main():
     table=args.table
 
     logging.basicConfig(
-    filename='.log',
+    filename=log,
     filemode='w',
     level=logging.DEBUG if debug else logging.CRITICAL
 )
